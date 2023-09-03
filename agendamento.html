@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul class="menu animate__animated animate__fadeInDown">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="biografia.html">Biografia</a></li>
+                <li class="active"><a href="agendamento.html">Agendamento</a></li>
+                <li><a href="pacote.html">Pacote 10%</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+        <br><br><br>
+        <div class="logo">
+            <img src="img/logo_2.svg" alt="Logo da empresa">
+        </div>
+        <div class="presentation-container">
+            <h2 class="presentation-title fade-in">PROMOÇÃO INVERNO</h2>
+            <h2 class="presentation-subtitle fade-in">Desconto de 10% em todos os serviços!</h2>
+            <h2 class="presentation-subtitle fade-in">3 sessões por semana para trabalhadores<br>com salário mínimo.<br>Apenas R$ 20,00 por sessão.</h2>
+          </div>          
+            <br><br><br>
+        
+        <div class="title">
+            <h2 class="section-title">Para agendar um serviço, preencha o formulário!</h2>
+            <form id="encomendas-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br><br>
+                
+                <label for="numero_de_celular">Número de celular:</label>
+                <input type="text" id="numero_de_celular" name="numero_de_celular" required><br><br>
+                
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required><br><br>
+                
+                <label for="data_pedido">Verificar disponibilidade a partir da data:</label>
+                <input type="date" id="data_pedido" name="data_pedido" required><br><br>
+
+                <p class="servico-preco"><strong>Reiki R$ 100,00 por sessão (Presencial ou Online - Informar na observação)</strong></p> 
+                <p class="servico-preco"><strong>Barra de Access R$ 100,00 por sessão (Presencial ou Online - Informar na observação)</strong></p>
+                <p class="servico-preco"><strong>Leitura de Cartas R$ 40,00 por sessão (Presencial ou Online - Informar na observação)</strong></p>
+                <p class="servico-preco"><strong>Meditação R$ 40,00 por sessão </strong></p>
+                <p class="servico-preco"><strong>Yoga R$ 40,00 por sessão </strong></p>
+                <p class="servico-preco"><strong>Florais R$ 50,00 por sessão </strong></p>
+                <p class="servico-preco"><strong>Ventosaterapia R$ 60,00 por sessão </strong></p>
+                <p class="servico-preco"><strong>Reflexologia Podal R$ 60,00 por sessão </strong></p>
+                <p class="servico-preco"><strong>Sauna de Vapor R$ 70,00 por sessão </strong></p>
+                <p class="servico-preco"><strong>Massagem Relaxante R$ 100,00 por sessão </strong></p>
+                <p class="servico-preco"><strong>Massagem Terapêutica R$ 50,00 por sessão </strong></p>
+                <p class="servico-preco"><strong>Massagem Modeladora R$ 50,00 por sessão </strong></p>
+                
+                <br>
+
+                <label for="observacao">Observação:</label>
+                <input type="text" id="observacao" name="observacao" required><br><br>
+
+                <label for="produtos"><strong>Serviços Avulsos:</strong></label>
+                <select id="produtos" name="produtos" required>
+                    <option value="">Selecionar Serviços</option>
+                    <option value="Reiki -" data-price="100">Reiki - R$ 100,00</option>
+                    <option value="Barra de Access -" data-price="100">Barra de Access - R$ 100,00</option>
+                    <option value="Leitura de Cartas -" data-price="40">Leitura de Cartas - R$ 40,00</option>
+                    <option value="Meditação -" data-price="40">Meditação - R$ 40,00</option>
+                    <option value="Yoga -" data-price="40">Yoga - R$ 40,00</option>
+                    <option value="Florais -" data-price="50">Florais - R$ 50,00</option>
+                    <option value="Ventosaterapia -" data-price="60">Ventosaterapia - R$ 60,00</option>
+                    <option value="Reflexologia Podal -" data-price="60">Reflexologia Podal - R$ 60,00</option>
+                    <option value="Sauna de Vapor -" data-price="70">Sauna de Vapor - R$ 70,00</option>
+                    <option value="Massagem Relaxante -" data-price="100">Massagem Relaxante - R$ 100,00</option>
+                    <option value="Massagem Terapêutica -" data-price="50">Massagem Terapêutica - R$ 50,00</option>
+                    <option value="Massagem Modeladora -" data-price="50">Massagem Modeladora - R$ 50,00</option>
+                </select>
+            </form>
+            <br>
+                <div id="carrinho" class="carrinho">
+                    <h3>Serviços selecionados:</h3>
+                    <ul id="itens-carrinho"></ul>
+                    <p id="total-carrinho">Total: R$ 0,00</p>
+                    <input type="hidden" id="valor-total" name="valor-total">
+                </div>
+
+                <div class="encomendar-section">
+                <img src="img/carrinho.png" class="carrinho-img" alt="Carrinho de Compras">
+                <div class="encomendar-content">
+                    <button id="encomendar" class="gray-button">Agendar Serviço</button>
+                </div>
+            
+            <br>
+            <br>
+            <br><br>
+            <br><br><br>
+        </div>
+        
+        <div class="image-container index-image-container">
+            <img src="img/mini_logo.svg" alt="Imagem Final" class="imagem-final">
+            <p class="image-text">Direitos Autorais © 2023 FRITZ - Terapeuta Holística. Todos os direitos reservados.</p>
+            <a href="https://iodsm.github.io/Ielris-Marques_Developer/" target="_blank">
+                <p class="text-reference">Desenvolvido por Ielris Marques - Developer</p>
+            </a>
+        </div>  
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

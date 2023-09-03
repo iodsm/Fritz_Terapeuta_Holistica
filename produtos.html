@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul class="menu animate__animated animate__fadeInDown">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="biografia.html">Biografia</a></li>
+                <li><a href="agendamento.html">Agendamento</a></li>
+                <li><a href="pacote.html">Pacote 10%</a></li>
+                <li class="active"><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+        <br><br><br>
+        <div class="logo">
+            <img src="img/logo_2.svg" alt="Logo da empresa">
+        </div>
+
+        <div class="presentation-container">
+            <h2 class="presentation-title fade-in">PROMOÇÃO INVERNO</h2>
+            <h2 class="presentation-subtitle fade-in">Desconto de 10% em todos os produtos!</h2>
+          </div>     
+            <br><br><br>
+
+
+        <br><br><br><br><br>
+        <div class="title">
+            <h2 class="section-title">Para encomendar um produto, preencha o formulário!</h2>
+            <form id="encomendas-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br><br>
+                
+                <label for="numero_de_celular">Número de celular:</label>
+                <input type="text" id="numero_de_celular" name="numero_de_celular" required><br><br>
+                
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required><br><br>
+                
+                <label for="data_pedido">Data da solicitação:</label>
+                <input type="date" id="data_pedido" name="data_pedido" required><br><br>
+                
+                <br>
+                <label for="itens"><strong>Selecione os produtos:</strong></label>
+                <select id="itens" name="itens" required>
+                    <option value="">Selecionar Produtos</option>
+                    <option value="Yoga Mat -" data-price="60">Yoga Mat - R$ 60,00</option>
+                    <option value="Difusor de Aromas -" data-price="20">Difusor de Aromas - R$ 20,00</option>
+                    <option value="Gel Massageador Arnica e Copaíba -" data-price="16">Gel Massageador Arnica e Copaíba - R$ 16,00</option>
+                    <option value="Incenso -" data-price="4">Incenso - R$ 4,00</option>
+                    <option value="Incensário Peruano Invertido -" data-price="60">Incensário Peruano Invertido - R$ 60,00</option>
+                </select>
+            </form>
+            <br>
+            <div id="carrinho" class="carrinho">
+                <h3>Produtos selecionados:</h3>
+                <ul id="itens-carrinho"></ul>
+                <p id="total-carrinho">Total: R$ 0,00</p>
+                <input type="hidden" id="valor-total" name="valor-total">
+            </div>
+    
+            <div class="encomendar-section">
+                <img src="img/carrinho.png" class="carrinho-img" alt="Carrinho de Compras">
+                <div class="encomendar-content">
+                    <button id="encomendar" class="gray-button">Encomendar Produtos</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <div class="portfolio-section">
+            <div id="portfolio-produtos" class="portfolio-gallery">
+                
+                <div class="portfolio-produtos">
+                    <img src="img/produto1.jpg" alt="produtos">
+                </div>
+        
+                <div class="portfolio-produtos">
+                    <img src="img/produto2.jpg" alt="produtos">
+                </div>
+        
+                <div class="portfolio-produtos">
+                    <img src="img/produto3.jpg" alt="produtos">
+                </div>
+        
+                <div class="portfolio-produtos">
+                    <img src="img/produto4.jpg" alt="produtos">
+                </div>
+
+                <div class="portfolio-produtos">
+                    <img src="img/produto5.jpg" alt="produtos">
+                </div>
+            </div>
+        </div>
+        
+        <div class="image-container index-image-container">
+            <img src="img/mini_logo.svg" alt="Imagem Final" class="imagem-final">
+            <p class="image-text">Direitos Autorais © 2023 FRITZ - Terapeuta Holística. Todos os direitos reservados.</p>
+            <a href="https://iodsm.github.io/Ielris-Marques_Developer/" target="_blank">
+                <p class="text-reference">Desenvolvido por Ielris Marques - Developer</p>
+            </a>
+        </div>  
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="produtos.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul class="menu animate__animated animate__fadeInDown">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="biografia.html">Biografia</a></li>
+                <li><a href="agendamento.html">Agendamento</a></li>
+                <li><a href="pacote.html">Pacote 10%</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li class="active"><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+
+        <br><br><br><br><br>
+
+        <div class="title">
+            <h2 class="section-title">Deixe seu Feedback</h2>
+            <p class="servico-desc">Agradecemos por compartilhar sua opinião conosco. Por favor, preencha o formulário abaixo:</p>
+            <form id="feedback-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required><br><br>
+            
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" rows="5" cols="120" required></textarea>
+                <br><br>
+                <!-- Classificação com estrelas -->
+                <div class="rating">
+                  <input type="radio" id="5estrelas" name="rating" value="5" required>
+                  <label for="5estrelas"><i class="fas fa-star"></i></label>
+            
+                  <input type="radio" id="4estrelas" name="rating" value="4" required>
+                  <label for="4estrelas"><i class="fas fa-star"></i></label>
+            
+                  <input type="radio" id="3estrelas" name="rating" value="3" required>
+                  <label for="3estrelas"><i class="fas fa-star"></i></label>
+            
+                  <input type="radio" id="2estrelas" name="rating" value="2" required>
+                  <label for="2estrelas"><i class="fas fa-star"></i></label>
+            
+                  <input type="radio" id="1estrela" name="rating" value="1" required>
+                  <label for="1estrela"><i class="fas fa-star"></i></label>
+                </div>
+                <br>
+
+                <!-- Botão Enviar Feedback -->
+                <button type="button" id="enviar-feedback">Enviar Feedback via WhatsApp</button>
+              </form>
+            
+              <script>
+                document.getElementById("enviar-feedback").addEventListener("click", function() {
+                  var nome = document.getElementById("nome").value;
+                  var feedback = document.getElementById("feedback").value;
+            
+                  var avaliacao = document.querySelector('input[name="rating"]:checked').value;
+                  var mensagem = "*Feedback Recebido:*%0A%0A";
+                  mensagem += "Nome: " + nome + "%0A";
+                  mensagem += "Feedback: " + feedback + "%0A";
+                  mensagem += "Avaliação: " + avaliacao + " estrelas%0A";
+            
+                  var url = 'https://wa.me/5531987000656/?text=' + mensagem;
+                  window.open(url);
+                });
+              </script>
+
+        <div class="image-container index-image-container">
+            <img src="img/mini_logo.svg" alt="Imagem Final" class="imagem-final">
+            <p class="image-text">Direitos Autorais © 2023 FRITZ - Terapeuta Holística. Todos os direitos reservados.</p>
+            <a href="https://iodsm.github.io/Ielris-Marques_Developer/" target="_blank">
+                <p class="text-reference">Desenvolvido por Ielris Marques - Developer</p>
+            </a>
+        </div>  
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="produtos.js"></script>
+</body>
+</html>
